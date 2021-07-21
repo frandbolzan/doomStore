@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,900;1,900&display=swap');
+
+// ---------------- General
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+
+    a{
+        text-decoration: none;
+        color: ghostwhite;
+    }
+}
+
+body{
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+}
+
+
+// ---------------- Mixins y Media Queries
+@mixin mediaMobile {
+    @media (max-width: 600px) { @content }
+}
+
+@mixin mediaTablet {
+    @media (min-width: 700px) and (max-width: 1100px) { @content }
+}
+
+@mixin mediaPc {
+    @media (min-width: 1200px) { @content }
+}
+
+// ---------------- NavBar
+nav{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: ghostwhite;
+    text-transform: uppercase;
+    width: 100%;
+    height: 50px;
+    font-weight: 800;
+    font-size: 13px;
+    position: fixed;
+    box-shadow: black 0px 0px 10px;
+
+    @include mediaTablet{
+        font-size: 16px;
+    };
+
+    ul{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        list-style: none;
+        align-items: center;
+        padding-top: 16px;
+    }
+}
+
+// ---------------- Portada del Home
+#portada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    font-size: 14px;
+
+
+    #doomguy{
+        margin-top: 70px;
+    }
+
+    #logo{
+        width: 200px;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+// ---------------- Sección Tienda
+#armas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+
+    h2{
+        margin: 10px 0;
+        color: ghostwhite;
+    }
+
+    .fila{
+        width: 75%;
+        padding-top: 10px;
+    }
+
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        @include mediaMobile{
+            flex-direction: column;
+        };
+
+        @include mediaTablet{
+            justify-content: space-around;
+        };
+    }
+
+    li{
+        background-color: ghostwhite;
+        width: 32%;
+        border-radius: 5px;
+        box-shadow: black 2px 2px 10px;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+
+        @include mediaTablet{
+            width: 32%;
+        };
+
+        @include mediaMobile{
+            width: 100%;
+            margin: 5px 0;
+        };
+
+        div{
+            width: 100%;
+            overflow: hidden;
+
+            @include mediaMobile{
+                height: 230px;
+            };
+
+            @include mediaTablet{
+                height: 225px;
+            };
+
+            @include mediaPc{
+                height: 290px;
+            };
+        }
+
+        h4{
+            font-weight: 400;
+            font-size: 20px;
+            padding: 10px 0;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        .precio{
+            font-size: 20px;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+    }
+}
+
+// ---------------- Sección Formulario
+form{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: ghostwhite;
+
+    #formulario{
+        width: 75%;
+        display: flex;
+        margin: 30px 0;
+        flex-direction: column;
+
+        .data{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            @include mediaMobile {
+                flex-direction: column;
+
+                input{
+                    width: 90%;
+                }
+
+                label{
+                    margin-top: 10px;
+                }
+            }
+
+            div{
+                display: flex;
+                flex-direction: column;
+            }
+
+            input{
+                background: none;
+                border-style: none none solid none;
+                border-width: 1px;
+                border-color: aliceblue;
+                color: ghostwhite;
+            }
+
+            label{
+                width: 100px;
+            }
+        }
+
+        #message{
+            padding: 5px;
+            margin-bottom: 50px;
+        }
+
+        #submit{
+            align-self: center;
+            background-color: orangered;
+            border: none;
+            text-transform: uppercase;
+            box-shadow: black 1px 1px 2px;
+            color: ghostwhite;
+        }
+    }
+
+    p{
+        margin: 20px 0px;
+        font-size: 14px;
+    }
+
+    input{
+        width: 200px;
+        padding: 10px;
+    }
+
+}
+
+// ---------------- Footer
+footer{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: ghostwhite;
+    padding: 20px;
+    text-align: center;
+}

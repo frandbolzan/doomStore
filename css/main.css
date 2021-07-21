@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,900;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+* a {
+  text-decoration: none;
+  color: ghostwhite;
+}
+
+body {
+  background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+}
+
+nav {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: ghostwhite;
+  text-transform: uppercase;
+  width: 100%;
+  height: 50px;
+  font-weight: 800;
+  font-size: 13px;
+  position: fixed;
+  box-shadow: black 0px 0px 10px;
+}
+@media (min-width: 700px) and (max-width: 1100px) {
+  nav {
+    font-size: 16px;
+  }
+}
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  padding-top: 16px;
+}
+
+#portada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  font-size: 14px;
+}
+#portada #doomguy {
+  margin-top: 70px;
+}
+#portada #logo {
+  width: 200px;
+}
+#portada #logo img {
+  width: 100%;
+}
+
+#armas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+#armas h2 {
+  margin: 10px 0;
+  color: ghostwhite;
+}
+#armas .fila {
+  width: 75%;
+  padding-top: 10px;
+}
+#armas ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+@media (max-width: 600px) {
+  #armas ul {
+    flex-direction: column;
+  }
+}
+@media (min-width: 700px) and (max-width: 1100px) {
+  #armas ul {
+    justify-content: space-around;
+  }
+}
+#armas li {
+  background-color: ghostwhite;
+  width: 32%;
+  border-radius: 5px;
+  box-shadow: black 2px 2px 10px;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 700px) and (max-width: 1100px) {
+  #armas li {
+    width: 32%;
+  }
+}
+@media (max-width: 600px) {
+  #armas li {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+#armas li div {
+  width: 100%;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  #armas li div {
+    height: 230px;
+  }
+}
+@media (min-width: 700px) and (max-width: 1100px) {
+  #armas li div {
+    height: 225px;
+  }
+}
+@media (min-width: 1200px) {
+  #armas li div {
+    height: 290px;
+  }
+}
+#armas li h4 {
+  font-weight: 400;
+  font-size: 20px;
+  padding: 10px 0;
+}
+#armas li img {
+  width: 100%;
+}
+#armas li .precio {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: ghostwhite;
+}
+form #formulario {
+  width: 75%;
+  display: flex;
+  margin: 30px 0;
+  flex-direction: column;
+}
+form #formulario .data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  form #formulario .data {
+    flex-direction: column;
+  }
+  form #formulario .data input {
+    width: 90%;
+  }
+  form #formulario .data label {
+    margin-top: 10px;
+  }
+}
+form #formulario .data div {
+  display: flex;
+  flex-direction: column;
+}
+form #formulario .data input {
+  background: none;
+  border-style: none none solid none;
+  border-width: 1px;
+  border-color: aliceblue;
+  color: ghostwhite;
+}
+form #formulario .data label {
+  width: 100px;
+}
+form #formulario #message {
+  padding: 5px;
+  margin-bottom: 50px;
+}
+form #formulario #submit {
+  align-self: center;
+  background-color: orangered;
+  border: none;
+  text-transform: uppercase;
+  box-shadow: black 1px 1px 2px;
+  color: ghostwhite;
+}
+form p {
+  margin: 20px 0px;
+  font-size: 14px;
+}
+form input {
+  width: 200px;
+  padding: 10px;
+}
+
+footer {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: ghostwhite;
+  padding: 20px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
